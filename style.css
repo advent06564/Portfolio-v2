@@ -788,86 +788,83 @@ body::selection {
 
 /* Mobile devices */
 @media (max-width: 768px) {
-  @media (max-width: 768px) {
-    #header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .menu-toggle {
-      display: block;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: #fff;
-      cursor: pointer;
-      margin-left: auto;
-    }
-  
-    .navbar-menu-container {
-      display: none;
-      width: 100%;
-    }
-  
-    .navbar-menu {
-      flex-direction: column;
-      width: 100%;
-      text-align: left;
-    }
-  
-    .navbar-menu li {
-      padding: 10px 0;
-    }
-  
-    .navbar-menu li a {
-      font-size: 18px;
-      padding: 10px 20px;
-      display: block;
-      width: 100%;
-    }
-  
-    .social-media-container {
-      display: none;
-      width: 100%;
-    }
-  
-    .social-media {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .social-media li {
-      padding: 10px 0;
-    }
-  
-    .social-media li a {
-      font-size: 18px;
-      padding: 10px 20px;
-      display: block;
-      width: 100%;
-    }
-  
-    #content-body,
-    #aboutme,
-    #introduction,
-    #skill {
-      padding: 20px 10px;
-      flex-direction: column;
-    }
-  
-    .cards-container,
-    .image-container {
-      width: 100%;
-      padding: 0;
-    }
-  
-    .design-card {
-      max-width: 100%;
-      margin: 10px 0;
-    }
-  
-  
-  
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .navbar-menu-container {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-menu li {
+    padding: 10px 0;
+  }
+
+  .navbar-menu li a {
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+  }
+
+  .social-media-container {
+    display: none;
+    width: 100%;
+  }
+
+  .social-media {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .social-media li {
+    padding: 10px 0;
+  }
+
+  .social-media li a {
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+  }
+
+  #content-body,
+  #aboutme,
+  #introduction,
+  #skill {
+    padding: 20px 10px;
+    flex-direction: column;
+  }
+
+  .cards-container,
+  .image-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .design-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
   /* Mobile menu active state */
   .navbar-menu-container.active,
   .social-media-container.active {
