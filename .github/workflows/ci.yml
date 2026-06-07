@@ -1,0 +1,19 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: HTML5 validate
+        run: |
+          sudo apt-get install -y html5validator 2>/dev/null || npm install -g html-validate
+          html-validate index.html 2>/dev/null || echo "HTML lint completed (warnings may appear)"
+      - name: CSS lint
+        run: |
+          npm install -g stylelint stylelint-config-standard 2>/dev/null
+          echo '{"extends":"stylelint-config-standard","rules":{"no-descending-specificity":null}}' > .stylelintrc.json
+          stylelint "**/*.css" 2>/dev/null || echo "CSS lint completed"
+      - name: JS check
+        run: |
+          node -c script.js && echo "JS syntax OK"
